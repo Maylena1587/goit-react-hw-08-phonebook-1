@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: ($tablet)) and (max-width: ($desktop - 1)) {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: ($desktop - 1)) {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media screen and (min-width: ($desktop)) {
+    width: calc((100% - 80px) / 2);
+    margin: 10px;
+  }
+
+  padding: 10px;
+
+  border: 1px solid $outerBackgroundColor;
+  border-radius: 10px;
+
+  transform: scale(1);
+  @include transition(transform);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+
+    @media screen and (min-width: ($tablet)) {
+      transform: scale(1.2);
+    }
+
+    @media screen and (min-width: ($desktop)) {
+      transform: scale(1.08);
+    }
+  }
+}
+
+.icon {
+  margin-right: 5px;
+
+  color: $textColor;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+
+  min-width: 160px;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+
+  min-width: 140px;
+}

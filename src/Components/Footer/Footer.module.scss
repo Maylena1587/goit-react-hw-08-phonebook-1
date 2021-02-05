@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  width: 100%;
+  flex-shrink: 0;
+
+  padding: 10px 0;
+
+  text-align: center;
+  font-size: 10px;
+
+  color: $textColor;
+  background-color: $mainBackgroundColor;
+}

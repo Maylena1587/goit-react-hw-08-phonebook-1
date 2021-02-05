@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.container {
+  width: $mobile;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+
+  margin: 0 auto;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $mainBackgroundColor;
+}

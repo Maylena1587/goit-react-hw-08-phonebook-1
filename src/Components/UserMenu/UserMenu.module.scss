@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.userMenu {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 32px;
+
+  margin-right: 5px;
+
+  color: gray;
+}
+
+.userName {
+  margin-right: 10px;
+}
+
+.btn {
+  //   @media screen and (max-width: ($tablet - 1)) {
+  //     width: 70%;
+  //   }
+
+  //   height: 32px;
+
+  padding: 7px;
+
+  color: $white;
+
+  background-color: gray;
+  border: none;
+  border-radius: 5px;
+
+  @include twoTransitions(color, background-color);
+
+  &:hover,
+  &:focus {
+    color: $textColor;
+    background-color: $accentColor;
+  }
+}

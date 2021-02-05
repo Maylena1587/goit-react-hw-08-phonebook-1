@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.contactList {
+  margin: 0 auto;
+  padding: 0;
+
+  @media screen and (min-width: ($desktop)) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: -10px;
+  }
+
+  list-style: none;
+}

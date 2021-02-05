@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.form {
+  margin-bottom: 20px;
+}
+
+.label {
+  @media screen and (max-width: ($tablet - 1)) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.title {
+  color: $textColor;
+
+  @media screen and (max-width: ($tablet - 1)) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: ($tablet)) {
+    margin-right: 20px;
+  }
+}
+
+.searchField {
+  @media screen and (max-width: ($tablet - 1)) {
+    width: 70%;
+  }
+
+  padding: 5px;
+
+  color: $textColor;
+
+  border: 1px solid $outerBackgroundColor;
+  border-radius: 5px;
+  outline: none;
+
+  @include transition(border-color);
+
+  &:focus {
+    border-color: $accentColor;
+  }
+}

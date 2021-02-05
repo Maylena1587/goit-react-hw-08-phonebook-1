@@ -1,0 +1,100 @@
+@import '../../styles/variables.scss';
+
+.title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin-bottom: 20px;
+
+  @media screen and (max-width: ($tablet - 1)) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: ($tablet)) {
+    width: 350px;
+  }
+}
+
+.addField {
+  padding: 5px;
+
+  color: $textColor;
+
+  border: 1px solid $outerBackgroundColor;
+  border-radius: 5px;
+  outline: none;
+
+  &::placeholder {
+    color: $textColor;
+  }
+
+  @include transition(border-color);
+
+  &:focus {
+    border-color: $accentColor;
+  }
+}
+
+.btn {
+  @media screen and (max-width: ($tablet - 1)) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: ($tablet)) {
+    width: 350px;
+  }
+
+  height: 32px;
+  margin-bottom: 20px;
+  padding: 7px;
+
+  color: $white;
+
+  background-color: gray;
+  border: none;
+  border-radius: 5px;
+
+  @include twoTransitions(color, background-color);
+
+  &:hover,
+  &:focus {
+    color: $textColor;
+    background-color: $accentColor;
+  }
+}
+
+.error {
+  position: absolute;
+  top: 35px;
+
+  margin: 0;
+
+  font-size: 12px;
+  text-align: left;
+  color: $errorColor;
+}
+
+.disclaimer {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  color: $textColor;
+}

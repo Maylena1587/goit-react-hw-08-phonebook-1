@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+.image {
+  display: block;
+  width: 45%;
+  margin: 0 auto 20px;
+}
+
+.text {
+  margin: 0 0 20px;
+}
+
+.link {
+  //   @media screen and (max-width: ($tablet - 1)) {
+  //     width: 70%;
+  //   }
+
+  //   height: 32px;
+
+  display: inline-block;
+  min-width: 80px;
+
+  padding: 7px;
+
+  text-decoration: none;
+  color: $white;
+
+  background-color: gray;
+  border-radius: 5px;
+
+  @include twoTransitions(color, background-color);
+
+  &:hover,
+  &:focus {
+    color: $textColor;
+    background-color: $accentColor;
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}

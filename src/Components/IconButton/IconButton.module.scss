@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.iconBtn {
+  margin: 0;
+  padding: 5px;
+  border: none;
+  border-radius: 50%;
+  color: $textColor;
+  background-color: $outerBackgroundColor;
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  @include twoTransitions(color, background-color);
+
+  &:hover,
+  &:focus {
+    color: $textColor;
+    background-color: $accentColor;
+  }
+}
